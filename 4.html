@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Необязательное задание.
+
+Необходимо от пользователя получить число.
+Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
+
+Пример:
+Пользователь ввел число 163. Программа должна вывести:
+"В числе 163 количество сотен: 1, десятков: 6, единиц: 3"
+
+Пример 2:
+Пользователь ввел число 74. Программа должна вывести:
+"В числе 74 количество сотен: 0, десятков: 7, единиц: 4"
+
+Пример 3:
+Пользователь ввел число 9537. Программа должна вывести:
+"В числе 9537 количество сотен: 5, десятков: 3, единиц: 7"
+
+Уточнение: пользователь всегда вводит корректное положительное число.
+-->
+  <script>
+    "use strict";
+
+    let number = +prompt('Введите число');
+
+    alert('В числе ' + number + ' ' + 'количество ' + ('сотен: ' + parseInt(number / 100)) + ', '
+      + ('десятков: ' + parseInt((number % 100) / 10)) + ', ' + ('единиц: ' + parseInt(number % 10)) + '.');
+
+    /*let number = +prompt('Введите число');
+
+    console.log('В числе ' + number + ' ' + 'количество ' + ('сотен: ' + parseInt(number / 100)) + ', '
+      + ('десятков: ' + parseInt((number % 100) / 10)) + ', ' + ('единиц: ' + parseInt(number % 10)) + '.');
+    */
+
+    /*
+    let number = +prompt('Введите число не более 9999');
+
+    function NumbVar(number) {
+      let other = {};
+
+      if (number < 0 || number > 9999) {
+        console.log('Введено неверное число');
+      }
+
+      else if (number > 0 && number <= 9999) {
+        other.units = parseInt(number % 10);
+        other.tens = parseInt((number % 100) / 10);
+        other.hundreds = parseInt(number / 100);
+        console.log(other);
+      }
+    }
+    NumbVar(number);
+    */
+
+    /*
+    let number = +prompt('Введите число');
+    
+    console.log(('Единицы: ' + parseInt(number % 10)) + `\n` + ('Десятки: ' + parseInt((number % 100) / 10)) + `\n` + ('Сотни: ' + parseInt(number / 100)));
+    */
+
+  </script>
+</body>
+
+</html>
