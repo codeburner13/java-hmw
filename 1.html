@@ -10,27 +10,67 @@
   <!--
 Обязательное задание.
 
-Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
-0 – это ноль
-1 – нечетное число
-2 – четное число
-3 – нечетное число
-…
-10 – четное число
+Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
+Необходимо создать функцию-конструктор/класс для продукта.
+Названия: `ProductES5` для es5 стиля, `ProductES6` для es6 стиля.
+При создании объекта от функции-конструктора/класса необходимо передавать имя
+и цену товара, эта информация должна быть сохранена в объекте.
+Также у объекта должна быть возможность выполнить метод `make25Discount`, данный
+метод должен уменьшать стоимость продукта на 25%.
+Необходимо продемонстрировать работу с объектом (в свободной форме).
 -->
   <script>
     "use strict";
-    for (let a = 0; a < 11; a++) {
-      if (a === 0) {
-        console.log(a + ' - это ноль');
+    /*
+    function ProductES5(game, price) {
+      this.game = game;
+      this.price = price;
+    }
+
+    ProductES5.prototype.show = function () {
+      console.log('Название игры: ' + this.game);
+      console.log('Цена игры ' + this.game + ': ' + this.price);
+    };
+
+    ProductES5.prototype.make25Discount = function () {
+      console.log('Цена игры ' + this.game + 'со скидкой: ' + (this.price *= 0.75));
+    }
+
+    const obj1 = new ProductES5('S.T.A.L.K.E.R. 2 ', 300);
+    obj1.show();
+
+    const obj2 = new ProductES5('The Witcher ', 200);
+    obj2.show();
+
+    obj1.make25Discount();
+    obj2.make25Discount();
+    */
+
+    class ProductES6 {
+      constructor(game, price) {
+        this.game = game;
+        this.price = price;
       }
-      else if (a % 2 === 0) {
-        console.log(a + ' - это четное');
+
+      show() {
+        console.log('Название игры: ' + this.game);
+        console.log('Цена игры ' + this.game + ': ' + this.price);
       }
-      else {
-        console.log(a + ' - это нечетное');
+
+      make25Discount() {
+        console.log('Цена игры ' + this.game + 'со скидкой: ' + (this.price *= 0.75))
       }
     }
+
+    const obj1 = new ProductES6('S.T.A.L.K.E.R. 2 ', 300);
+    obj1.show();
+
+    const obj2 = new ProductES6('The Witcher ', 200);
+    obj2.show();
+
+    obj1.make25Discount();
+    obj2.make25Discount();
+
   </script>
 </body>
 
